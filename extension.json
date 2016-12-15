@@ -1,0 +1,50 @@
+{
+    "name": "KwikiContextMenu",
+	"version": "0.1.0",
+	"author": [
+		"[http://kwiki.co.il Kwiki]",
+		"[[mw:user:HagaiAsaban|Hagai Asaban]]",
+		"[[mw:user:Yacohen|Yacohen]]"
+	],
+	"url": "doalogue-kwiki/KwikiContextMenu",
+    "descriptionmsg": "kwiki-context-menu-desc",
+	"license-name": "GPL v2",
+	"type": "other",
+	"AutoloadClasses": {
+		"KwikiContextMenuHooks": "KwikiContextMenu.hooks.php"
+	},
+	"Hooks": {
+		"BeforePageDisplay": [
+			"KwikiContextMenuHooks::onBeforePageDisplay"
+		]
+	},
+	"MessagesDirs": {
+		"KwikiContextMenu": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.KwikiContextMenu": {
+			"dependencies": [
+                "ext.KwikiFAB"
+			],
+			"scripts": [
+                "lib/jquery.contextMenu.min.js",				
+				"modules/ext.KwikiContextMenu.js"        
+			],
+			"styles": [
+                "lib/jquery.contextMenu.min.css",
+                "modules/ext.KwikiContextMenu.css"
+			],
+            "messages": [
+
+            ]            
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "KwikiContextMenu"
+	},
+	"SpecialPages": {},
+	"manifest_version": 1
+}
